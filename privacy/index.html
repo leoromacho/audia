@@ -1,4 +1,9 @@
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Audia — Privacy Policy</title>
 <style>
   @font-face {
@@ -46,7 +51,8 @@
       --accent-ink: #0D1326;
       --hairline: rgba(255, 255, 255, 0.1);
       --hairline-strong: rgba(255, 255, 255, 0.16);
-      --glow: rgba(109, 124, 255, 0.3);
+      --glow: rgba(109, 124, 255, 0.22);
+      --glow-deep: rgba(30, 42, 77, 0.85);
       --watermark: rgba(244, 241, 237, 0.06);
       --badge-bg: rgba(255, 255, 255, 0.045);
     }
@@ -62,7 +68,8 @@
     --accent-ink: #0D1326;
     --hairline: rgba(255, 255, 255, 0.1);
     --hairline-strong: rgba(255, 255, 255, 0.16);
-    --glow: rgba(109, 124, 255, 0.3);
+    --glow: rgba(109, 124, 255, 0.22);
+    --glow-deep: rgba(30, 42, 77, 0.85);
     --watermark: rgba(244, 241, 237, 0.06);
     --badge-bg: rgba(255, 255, 255, 0.045);
   }
@@ -85,14 +92,16 @@
     overflow-x: hidden;
   }
 
+  /* Halo de luz superior, igual que en la pantalla de recepción por WiFi
+     (WebUploadServer.swift): fijo al viewport en vez de a un tamaño en
+     píxeles, para que acompañe a lo largo de todo el scroll en una página
+     tan larga como esta, no solo en los primeros 640px. */
   .glow {
-    position: absolute;
-    top: -220px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 900px;
-    height: 640px;
-    background: radial-gradient(closest-side, var(--glow), transparent 72%);
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(120% 70% at 50% -10%, var(--glow) 0%, transparent 55%),
+      radial-gradient(90% 60% at 50% 0%, var(--glow-deep, transparent) 0%, transparent 70%);
     pointer-events: none;
     z-index: 0;
   }
@@ -345,6 +354,8 @@
     }
   }
 </style>
+</head>
+<body>
 
 <div class="glow"></div>
 
@@ -449,3 +460,6 @@
   </footer>
 
 </div>
+
+</body>
+</html>
