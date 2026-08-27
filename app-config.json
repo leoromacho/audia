@@ -1,13 +1,15 @@
 {
   "schemaVersion": 1,
   "updatedAt": "2026-08-20T16:53",
-  "latestVersion": "1.0.3",
+  "latestVersion": "1.0.4",
 
   "versions": {
     "1.0.0": "warning",
     "1.0.1": "warning",
-    "1.0.2": "warning"
-    "1.0.3": "none"
+    "1.0.2": "warning",
+    "1.0.3": "warning",
+    "1.0.4": "none",
+    "1.0.5": "none"
   },
 
   "messages": {
