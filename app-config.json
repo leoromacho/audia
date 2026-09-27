@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-20T10:00",
-  "latestVersion": "1.0.8",
+  "updatedAt": "2026-09-27T19:50",
+  "latestVersion": "1.0.11",
 
   "versions": {
     "1.0.0": "warning",
@@ -12,7 +12,10 @@
     "1.0.5": "warning",
     "1.0.6": "warning",
     "1.0.7": "warning",    
-    "1.0.8": "none"
+    "1.0.8": "warning",    
+    "1.0.9": "warning",    
+    "1.0.10": "warning",        
+    "1.0.11": "none"
   },
 
   "messages": {
